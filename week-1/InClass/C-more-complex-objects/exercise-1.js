@@ -1,9 +1,7 @@
 /*
 Given the following house - follow the instructions below.
-
 Make sure you run the file after and it outputs the correct results.
 */
-
 let house = {
   address: "1 Kinning Park",
   previousOwners: ["Claire M.", "John A."],

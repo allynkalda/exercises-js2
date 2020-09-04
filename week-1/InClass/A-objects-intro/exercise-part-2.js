@@ -22,7 +22,7 @@ var phone = {
 }
 
 
-if (phoe.hasStylus) {
+if (phone.hasStylus) {
     console.log(`Phone has stylus`)
 } 
 else {

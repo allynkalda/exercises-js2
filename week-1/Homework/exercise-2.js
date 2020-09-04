@@ -1,12 +1,14 @@
 /*
 Alice has a list of good friends.
-
 Define a method "makeFriend" to add a new friend to her list.
 */
 
 let person = {
     name: "Alice",
     friends: ["John", "Nina"],
+    makeFriend: function(newFriend) {
+      this.friends = this.friends + ', ' +newFriend;
+    }
   };
   
   /*

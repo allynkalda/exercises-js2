@@ -1,9 +1,7 @@
 /*
 Given the same "house" object again
-
 Follow the instructions below and then run the file and make sure it outputs the correct results
 */
-
 let house = {
   address: "1 Kinning Park",
   previousOwners: ["Claire M.", "John A."],

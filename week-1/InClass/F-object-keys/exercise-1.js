@@ -1,7 +1,5 @@
 /*
-
 Return the keys and values of the following object
-
 */
 
 let capitalCities = {

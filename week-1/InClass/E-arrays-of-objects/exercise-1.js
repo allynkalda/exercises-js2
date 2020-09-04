@@ -24,8 +24,8 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
-
 let persons = [person1, person2, person3];// Complete here
+
 function getName(person) {
     return person.name
 }
@@ -37,6 +37,7 @@ function isYoungerThan28YearsOld(person) {
 let personNames = persons.map(getName)// Complete here
 
 //ops1 let personsYoungerThan28YearsOld = persons.filter(isYoungerThan28YearsOld)// 
+console.log(object);
 
 
 //opc 2

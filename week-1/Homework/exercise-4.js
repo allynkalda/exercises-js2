@@ -59,10 +59,11 @@ let restaurant1 = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-      // Complete here
+      let seatsAvailable = restaurants.totalSeats - restaurants.numberOfCustomers
+      console.log(seatsAvailable);
     },
     findRestaurantServingDish: function (dishName) {
-      // Complete here
+      
     },
     countNumberOfRestaurantsInArea: function (area) {
       // Complete here
