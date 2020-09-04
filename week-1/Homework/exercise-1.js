@@ -39,8 +39,13 @@ function getEmailAddresses(house1, house2) {
 }
 
 // returns the address for the cheapest house out of the two
+
 function getCheapestAddress(house1, house2) {
- 
+  if (JSON.stringify(kinningParkHouse.price) < JSON.stringify(parkAvenueHouse.price)) {
+    return kinningParkHouse.address //`${kinningParkHouse.email}`;
+} else {
+    return  parkAvenueHouse.address;
+}
 }
 
 /*

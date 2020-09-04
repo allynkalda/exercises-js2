@@ -13,7 +13,6 @@ all the restaurant names serving this dish.
 3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west),
 and returns the number of restaurants in this area.
 */
-
 let restaurant1 = {
     name: "Paesano",
     totalSeats: 10,
@@ -73,7 +72,7 @@ let restaurant1 = {
   /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
   */
-  
+
   let restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(
     5
   );
