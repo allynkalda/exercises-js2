@@ -18,12 +18,29 @@ let coffeeMachine = {
     insertMoney: function (amount) {
       this.insertedAmount = amount;
     },
-    getCoffee: function (coffee) {      
-      // if (this.insertedAmount >= this.prices) {
-      //   return `Please take your ${coffee}`;
-      // } else { 
-      //   return `Sorry you don't have enough money for a ${coffee}` //VALIDATION ERROR
-      // }
+    getCoffee: function (coffee) {  
+      switch (coffee) {
+        case "blackCoffee": 
+         if (this.insertedAmount >= this.prices.blackCoffee) {
+             return `Please take your ${coffee}`;
+            } else {
+              return `Sorry you don't have enough money for a ${coffee}`;
+              break;
+            }        
+        case "cappuccino": 
+        if (this.insertedAmount >= this.prices.cappuccino){ 
+          return `Please take your ${coffee}`;
+        } else {
+          return `Sorry you don't have enough money for a ${coffee}`;
+          break;
+        }        
+        case "flatWhite": 
+        if (this.insertedAmount >= this.prices.flatWhite){ 
+              return `Please take your ${coffee}`;
+        } else {
+          return `Sorry you don't have enough money for a ${coffee}`
+        }
+      }
     }
   };
   
