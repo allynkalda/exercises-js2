@@ -3,7 +3,6 @@
 
     Once you fix them, run this file, it should output the correct values!
 */
-
 var phone = {
     brand:'iPhone',
     model: 'iPhone X',

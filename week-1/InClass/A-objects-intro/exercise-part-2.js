@@ -1,9 +1,6 @@
 /*
-
 The objects below have some syntax issues - try and fix them all!
-
 */
-
 var kitten = {
     furColour: "orange",
     age: 23

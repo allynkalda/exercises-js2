@@ -1,10 +1,8 @@
 /*
-
 Think of 5 different real world "things" that you 
 can describe with a JavaScript object
 
 Assign each of them to a separate variable
-
 
 For example:
 var car = {
@@ -14,7 +12,6 @@ var car = {
     horsepower: 115,
     doors: 5
 };
-
 */
 let camara1 = {
     megapixeles: '16MP',

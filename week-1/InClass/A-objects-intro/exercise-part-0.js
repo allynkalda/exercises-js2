@@ -16,5 +16,7 @@ let laptop = {
   };
 
   console.log(laptop);
+
   var priceWithTax = laptop.price.base * 1.21;
+  
   console.log(`El precio es: ${priceWithTax} €`);
