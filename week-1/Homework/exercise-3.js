@@ -16,34 +16,47 @@ let coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function (amount) {
-      this.insertedAmount = amount;
+      this.insertedAmount = amount; //solo añade un importe  por cada interacción
     },
-    getCoffee: function (coffee) {  
-      switch (coffee) {
-        case "blackCoffee": 
-         if (this.insertedAmount >= this.prices.blackCoffee) {
-             return `Please take your ${coffee}`;
-            } else {
-              return `Sorry you don't have enough money for a ${coffee}`;
-              break;
-            }        
-        case "cappuccino": 
-        if (this.insertedAmount >= this.prices.cappuccino){ 
+    getCoffee: function (coffee) {
+      const priceOfCoffee = this.prices[coffee];
+        if (priceOfCoffee <= this.insertedAmount) {
           return `Please take your ${coffee}`;
         } else {
           return `Sorry you don't have enough money for a ${coffee}`;
-          break;
-        }        
-        case "flatWhite": 
-        if (this.insertedAmount >= this.prices.flatWhite){ 
-              return `Please take your ${coffee}`;
-        } else {
-          return `Sorry you don't have enough money for a ${coffee}`
-        }
-      }
     }
-  };
+  }
   
+ //OPC3 
+  //return this.prices[coffee] <= this.insertedAmount ? `Please take your ${coffee}` : `Sorry you don't have enough money for a ${coffee}`
+
+//OPC 4
+//   getCoffee: function (coffee) {  
+//     switch (coffee) {
+//       case "blackCoffee": 
+//        if (this.insertedAmount >= this.prices.blackCoffee) {
+//            return `Please take your ${coffee}`;
+//           } else {
+//             return `Sorry you don't have enough money for a ${coffee}`;
+//             break;
+//           }        
+//       case "cappuccino": 
+//       if (this.insertedAmount >= this.prices.cappuccino){ 
+//         return `Please take your ${coffee}`;
+//       } else {
+//         return `Sorry you don't have enough money for a ${coffee}`;
+//         break;
+//       }        
+//       case "flatWhite": 
+//       if (this.insertedAmount >= this.prices.flatWhite){ 
+//             return `Please take your ${coffee}`;
+//       } else {
+//         return `Sorry you don't have enough money for a ${coffee}`
+//       }
+//     }
+//   }
+};
+     
   /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
   */

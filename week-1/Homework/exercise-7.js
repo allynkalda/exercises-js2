@@ -3,7 +3,6 @@ Did you know you can also have an array of objects? We've created one for you he
 and for each object, `console.log()` out the sentence:
 
 "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
-
 Here is the array:
 
 */ 
@@ -39,13 +38,10 @@ var writers = [
   },
 ];
 
-
 writers.forEach(name => console.log(`Hi, my name is ${name.firstName} ${name.lastName}. I am ${name.age} years old, and work as ${name.occupation}`));
-
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
-
 writers.forEach((name) => {
   if(name.alive){
   console.log(`02nd: Hi, my name is ${name.firstName} ${name.lastName}. I am ${name.age} years old, and work as ${name.occupation}`)
