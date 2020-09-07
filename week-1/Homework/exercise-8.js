@@ -61,13 +61,11 @@ var mentors = [
 /*1. Loop through the array, and for each object, `console.log()` out the sentence only for
 mentors that are in Barcelona and one of the skills is React
 "Hi, my name is {firstName} {lastName}. I work in Barcelona and i know React."*/
-/******************************************************************************************************** 
-========================================================================================********************** 
+// This works!
 let barcelonaWorkers = mentors
   .filter(mentor => (mentor.job.city === 'Barcelona') && (mentor.skills.includes('React')))
   .forEach(mentor => console.log(`Hi, my name is ${mentor.firstName} ${mentor.lastName}. I work in Barcelona and I know React`));
-console.log('1', barcelonaWorkers);
-/*********************************************************************************************************/
+
 /*2. To those that work in Barcelona, set "Jun1" in the class attribute, 
 and add a new skill to the list "SQL".
 To add elements in an array you can use .push()
@@ -95,6 +93,15 @@ let barcelonaWorkersSQL = barcelonaWorkers2.map(mentor => mentor.class);
 console.log('2.added SQL barcelonaWorkersSQL', barcelonaWorkersSQL.skills);
 // barcelonaWorkersSQL.skills.push('SQL');
 
+// OR use map and add Jun1 and push SQL in the same function
+
+  let addedClass = barcelonaWorkers2.map(mentor => {
+      mentor.class = 'Jun1';
+      mentor.skills.push('SQL');
+      return mentor;
+    })
+  console.log('2.added June and SQL to those who work in Barcelona', addedClass);
+
 /******************************************************************************************************************
 /*3. Create an object method with the name .addSkill() to be able to add skills from it**/
 /*****************************************************************************************************************************========================================================================================================= */
@@ -106,10 +113,17 @@ mentors.forEach(mentor => {
 mentors[0].addSkill('Python');
 console.log('3.add method new skill', mentors[0].skills);
 // /*4. Create a function to add a skill to all members in a list of mentors*/**********************************************************************************************************************========================================================================================================= */
- function addSkill(mentors,newSkill){
-
- }
-console.log('4.add skill', addSkill());
+   function addSkill(mentors, newSkill){
+     // make a function to push the newSkill into the array
+    const addSkillToMentor = (mentor) => mentor.skills.push(newSkill);
+     // then loop through the array to call this function on each object
+    mentors.forEach(mentor => {
+        addSkillToMentor(mentor);
+    })
+    return mentors;
+   }
+  // try to use this method to answer number 5 and 6. if you get stuck let me know! :)
+  console.log('4.add skill', addSkill(mentors, 'Dancing'));
 /*5. Create a function to remove a skill to all members in a list of mentors
 /***************************************************************************************************************************************=========================================================================================================********** */
 function removeSkill(mentors,newSkill){
